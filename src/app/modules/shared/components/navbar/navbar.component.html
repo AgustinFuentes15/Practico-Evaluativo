@@ -1,25 +1,31 @@
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-button routerLink="/inicio">inicio</button>
+<mat-toolbar id="navMenu">
+  <button id="menuSecciones" mat-icon-button class="example-icon"[matMenuTriggerFor]="secciones" >
+    <mat-icon>menu</mat-icon>
+  </button>
+<mat-menu #secciones="matMenu">
+<button mat-menu-item routerLink="/inicio">inicio</button>
+<button mat-menu-item [matMenuTriggerFor]="producto">Productos</button>
+</mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="producto">Productos</button>
-    <mat-menu #producto="matMenu">
-      <button mat-menu-item  routerLink="/productos">Productos</button>
-      <button mat-menu-item routerLink="/suplementos" >Suplementos</button>
-      <button mat-menu-item routerLink="/accesorios">Accesorios</button>
-      <button mat-menu-item routerLink="/indumentaria"> Indumentaria </button>
-    </mat-menu>
-    
+
+  <span>My App</span>
+
+  <button id="menuInicio" mat-button routerLink="/inicio">inicio</button>
+
+  <button id="menuProducto" mat-button [matMenuTriggerFor]="producto">Productos</button>
+  <mat-menu #producto="matMenu">
+    <button mat-menu-item  routerLink="/productos">Productos</button>
+    <button mat-menu-item routerLink="/suplementos" >Suplementos</button>
+    <button mat-menu-item routerLink="/accesorios">Accesorios</button>
+    <button mat-menu-item routerLink="/indumentaria"> Indumentaria </button>
+  </mat-menu>
+  
 <span class="example-spacer"></span>
 <!-- inicio de sesión y formulario de registro -->
 <button mat-icon-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
 <mat-menu #usuario="matMenu">
-  <button mat-menu-item  routerLink="/registro">Registro</button>
-  <button mat-menu-item routerLink="/inicio-sesion" >Iniciar Sesión</button>
+<button mat-menu-item  routerLink="/registro">Registro</button>
+<button mat-menu-item routerLink="/inicio-sesion" >Iniciar Sesión</button>
 
 </mat-menu>
 
@@ -27,9 +33,8 @@
 
 
 
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    
-  </mat-toolbar>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
   
+</mat-toolbar>

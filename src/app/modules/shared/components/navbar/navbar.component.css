@@ -1,0 +1,31 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+/*declaramos con palabra reservada MEDIA -> dispositivos pequeños */ 
+  @media(min-width:300px) and (max-width:700px){
+    mat-toolbar{
+      background-color: orange;
+    }
+    #menuInicio{
+      display: none;
+    }
+    #menuProducto{
+      display: none;
+    }
+    #navMenu{
+      height: 3rem;
+    }
+
+  }
+  /* dispositivos mas grande */
+  @media (min-width:700px){
+    mat-toolbar{
+      background-color: aqua;
+    }
+    #menuSecciones{
+      display: none;
+    }
+    #navMenu{
+      height: 6rem;
+    }
+  }

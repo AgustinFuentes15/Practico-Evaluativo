@@ -84,7 +84,7 @@ async guardarUser(){
 
   //funcion para vaciar form
   limpiarImputs() {
-    const inputs = {
+    const imputs = {
       uid: this.usuarios.uid = "",
       nombre: this.usuarios.nombre = "",
       apellido: this.usuarios.apellido = "",

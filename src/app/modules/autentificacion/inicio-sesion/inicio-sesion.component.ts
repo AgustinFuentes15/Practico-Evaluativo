@@ -51,7 +51,7 @@ this.servicioRuta.navigate(['/inicio'])
   })
 }
    limpiarImputs(){
-   const inputs= {
+   const imputs= {
     email: this.coleccionUsers.email="",
      password: this.coleccionUsers.password="",
  
