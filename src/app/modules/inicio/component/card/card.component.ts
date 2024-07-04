@@ -12,21 +12,21 @@ public info:Productos[]
 constructor(){
   this.info=[
     {
-      id:"",
+      id:"1",
       nombre:"",
       precio: 0,
       imagen:"",
       tipo:""
     },
     {
-      id:"",
+      id:"2",
       nombre:"",
       precio: 0,
-      imagen:"",
+      imagen:"./assets/boca-carrusel-2.jpg",
       tipo:""
     },
     {
-      id:"",
+      id:"3",
       nombre:"",
       precio: 0,
       imagen:"",
