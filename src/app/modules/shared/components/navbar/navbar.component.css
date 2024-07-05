@@ -1,7 +1,13 @@
 .example-spacer {
     flex: 1 1 auto;
   }
-/*declaramos con palabra reservada MEDIA -> dispositivos pequeños */ 
+
+ 
+  #navMenu{
+    color: yellow;
+    background-color: darkblue;
+  }
+
   @media(min-width:300px) and (max-width:700px){
     mat-toolbar{
       background-color: orange;
@@ -13,19 +19,45 @@
       display: none;
     }
     #navMenu{
-      height: 3rem;
+      height: 4rem;
+    }
+    #imagenesNav{
+      width: 25%;
+  
+    }
+    #spanlogo2{
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      
+     
+    }
+    #spanlogo1{
+      display: none;
     }
 
   }
   /* dispositivos mas grande */
   @media (min-width:700px){
-    mat-toolbar{
-      background-color: aqua;
-    }
+    
     #menuSecciones{
       display: none;
     }
     #navMenu{
       height: 6rem;
     }
+    #imagenesNav{
+      width: 25%;
+    }
+    .container-fluid{
+      display: none;
+    }
+    #spanlogo1{
+      width: 45%;
+    }
+
+    #spanlogo2{
+      display: none;
+    }
+   
   }

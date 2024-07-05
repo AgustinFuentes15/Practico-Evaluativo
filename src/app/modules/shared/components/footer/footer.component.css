@@ -1,0 +1,28 @@
+@media(min-width:300px) and (max-width:700px){
+    #footerMain{
+        width: 100%;
+    }
+    #footerLetra{
+        font-size: medium;
+    }  
+    #logoStyle{
+        width: 2rem;
+       } 
+
+  }
+  /* dispositivos mas grande */
+  @media (min-width:700px){
+    #footerMain{
+        width: 100%;
+        
+    }
+    #footerLetra{
+        font-size: large;
+    }   
+       #logoStyle{
+        width: 2rem;
+       }
+    
+
+    
+  }

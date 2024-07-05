@@ -40,18 +40,16 @@
 }
 
 
-.carousel {
+/* .carousel {
     margin-bottom: 4rem;
-}
+} */
 
-.carousel-caption {
+/* .carousel-caption {
     bottom: 3rem;
     z-index: 10;
-}
+} */
 
-.carousel-item {
-    height: 32rem;
-}
+
 
 .marketing .col-lg-4 {
     margin-bottom: 1.5rem;
@@ -75,15 +73,31 @@
 
 
 @media(min-width:300px) and (max-width:700px) {
-    #carruselMain {
-     height: 50%;
+    #myCarousel {
+     height: 100%;
     }
-  
+    #carruselImg{
+        height: 100%;
+        width: 100%;
+    }
+    .carousel-item{
+        height: 18rem;
+    }
+    #letraCarrusel{
+        font-size: large;
+    }
 }
 @media(min-width:700px ) {
-    #carruselMain {
+    #myCarousel {
      height: 100%;
    
+    }
+    #carruselImg{
+        height: 100%;
+        width: 100%;
+    }
+    .carousel-item{
+        height: 35rem;
     }
 
 }
