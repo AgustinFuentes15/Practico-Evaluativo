@@ -79,6 +79,8 @@
     #carruselImg{
         height: 100%;
         width: 100%;
+        
+    
     }
     .carousel-item{
         height: 18rem;
@@ -88,7 +90,7 @@
     }
 }
 @media(min-width:700px ) {
-    #myCarousel {
+    #myCarousel { 
      height: 100%;
    
     }

@@ -1,0 +1,56 @@
+
+.divCard {
+    text-align: center; /* Alinea el contenido de la tarjeta al centro */
+    padding: 20px; /* Espacio interior de la tarjeta */
+  }
+  
+
+
+  @media(min-width:300px) and (max-width:700px) {
+    .imagenCard {
+        border-radius: 100%; 
+        overflow: hidden; 
+        width: 60%; 
+        transition: box-shadow 0.3s ease;
+        height: auto; 
+        border: 2px solid rgb(7, 0, 102); 
+  }
+  .imagenCard:hover{
+    width: 59%;
+    overflow: hidden; 
+    box-shadow: 0 3px 5px  rgba(2, 80, 197, 0.938);
+  }
+  #contenedorCards{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    font-size: small;
+}
+}
+
+
+
+
+
+  @media(min-width:700px ) {
+    .imagenCard {
+        border-radius: 100%; 
+        overflow: hidden; 
+        width: 50%; 
+        transition: box-shadow 0.3s ease;
+        height: auto; 
+        border: 2px solid rgb(7, 0, 102); 
+        
+      }
+      .imagenCard:hover{
+        width: 49%;
+        overflow: hidden; 
+        box-shadow: 0 3px 5px  rgba(2, 80, 197, 0.938);
+      }
+      #contenedorCards{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+  }

@@ -1,10 +1,7 @@
 .contenedorPrincipal{
     display: block;
 }
-.contenedorSecundario{
-    padding: 10%;
-   flex-direction: row;
-}
+
 #buttonInicio{
     justify-content: center;
     text-align: center;
