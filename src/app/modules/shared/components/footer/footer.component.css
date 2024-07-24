@@ -1,6 +1,6 @@
 #footerMain{
     background-color: darkblue;
-    color:yellow;
+    color:rgb(255, 198, 0);
 }
 
 @media(min-width:300px) and (max-width:700px){
@@ -20,14 +20,20 @@
     #footerMain{
         width: 100%;
         
+        
     }
     #footerLetra{
         font-size: large;
+       
+        
     }   
        #logoStyle{
         width: 2rem;
        }
     
-
+.redesSociales{
+    flex: 1 1 auto;
+    
+}
     
   }
