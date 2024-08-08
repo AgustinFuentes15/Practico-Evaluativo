@@ -4,6 +4,8 @@ import { Usuario } from 'src/app/models/usuarios';
 import { AuthService } from '../services/auth.service';
 import { FirestoreService } from '../../shared/service/firestore.service';
 import { Router } from '@angular/router';
+import * as CryptoJS from 'crypto-js';
+import Swal from 'sweetalert2';
 
 
 @Component({

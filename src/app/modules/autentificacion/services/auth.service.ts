@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -8,35 +9,41 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class AuthService {
 
 
-  constructor(public auth:AngularFireAuth) { }
-  
-async obtenerUid(){
+  constructor(
+    private auth: AngularFireAuth,
+    private servicioFirestore: AngularFirestore
+  ){}
 
-  const user = await this.auth.currentUser
-   
+  async obtenerUid() {
 
-  if(user ==null){
-    return null
-  }else{
-return user.uid
-  }
-}
+    const user = await this.auth.currentUser
 
 
-
-  registrar(email:string, password:string){
-
-    return this.auth.createUserWithEmailAndPassword(email,password);
+    if (user == null) {
+      return null
+    } else {
+      return user.uid
+    }
   }
 
-  iniciarSesion(email:string, password :string){
-  
-  return this.auth.signInWithEmailAndPassword(email,password);
+  obtenerUsuario(email: string) {
+    return this.servicioFirestore.collection('usuarios', ref => ref.where('email', '==', email)).get().toPromise()
   }
 
- 
-  cerraSesion(){
-   
+
+  registrar(email: string, password: string) {
+
+    return this.auth.createUserWithEmailAndPassword(email, password);
+  }
+
+  iniciarSesion(email: string, password: string) {
+
+    return this.auth.signInWithEmailAndPassword(email, password);
+  }
+
+
+  cerraSesion() {
+
     return this.auth.signOut();
   }
 }
